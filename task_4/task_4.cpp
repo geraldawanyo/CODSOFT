@@ -43,8 +43,10 @@ int main () {
                 cout << "List is full" << endl;
             /*Allows user to add task if list capacity hasn't been reached*/
             } else {
+                  
                   cout << "Enter task: ";
-                  cin >> list[tasks_count][0];
+                  cin.ignore();
+                  getline(cin,list[tasks_count][0]); 
                   list[tasks_count][1] = "pending";
                   tasks_count++;
                   cout << "Task Added" << endl;
